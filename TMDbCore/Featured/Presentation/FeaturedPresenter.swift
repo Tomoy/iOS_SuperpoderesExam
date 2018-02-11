@@ -16,6 +16,8 @@ protocol FeaturedView: class {
 
 	func update(with shows: [Show])
 	func update(with movies: [Movie])
+    
+    func setLoading(_ loading: Bool)
 }
 
 final class FeaturedPresenter {
@@ -53,6 +55,8 @@ final class FeaturedPresenter {
 private extension FeaturedPresenter {
    
     func loadContents() {
+        self.view?.setLoading(true)
+
         let showsOnTheAir = repository.showsOnTheAir()
             .map { $0.prefix(3) }
         let moviesNowPlaying = repository.moviesNowPlaying(region: Locale.current.regionCode!)
@@ -68,6 +72,7 @@ private extension FeaturedPresenter {
             }
             self.view?.update(with: Array(shows))
             self.view?.update(with: Array(movies))
+            self.view?.setLoading(false)
         })
         .disposed(by: disposeBag)
     }

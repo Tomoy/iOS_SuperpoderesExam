@@ -18,7 +18,9 @@ class FeaturedViewController: UIViewController {
 	@IBOutlet private var showsStackView: UIStackView!
 	@IBOutlet private var moviesLabel: UILabel!
 	@IBOutlet private var moviesStackView: UIStackView!
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
 	// MARK: - Properties
 
 	private let presenter: FeaturedPresenter
@@ -54,6 +56,18 @@ class FeaturedViewController: UIViewController {
 }
 
 extension FeaturedViewController: FeaturedView {
+    
+    func setLoading(_ loading: Bool) {
+        
+        if (loading) {
+            scrollView.isHidden = true
+            activityIndicator.startAnimating()
+        } else {
+            scrollView.isHidden = false
+            activityIndicator.startAnimating()
+        }
+    }
+    
 	func setShowsHeaderTitle(_ title: String) {
 		showsLabel.text = title
 	}

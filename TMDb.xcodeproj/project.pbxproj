@@ -10,6 +10,10 @@
 		01ADDF691F8A714A008C909A /* FeaturedPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADDF681F8A714A008C909A /* FeaturedPresenterTest.swift */; };
 		01ADDF6B1F8A71F2008C909A /* DetailNavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADDF6A1F8A71F2008C909A /* DetailNavigatorMock.swift */; };
 		01ADDF6D1F8A732D008C909A /* FeaturedRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ADDF6C1F8A732D008C909A /* FeaturedRepositoryMock.swift */; };
+		01EEADC32030BD3B00E82DD5 /* ShowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEADC22030BD3B00E82DD5 /* ShowPresenter.swift */; };
+		01EEADC52030BE3400E82DD5 /* ShowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEADC42030BE3400E82DD5 /* ShowRepository.swift */; };
+		01EEADC72030BF1E00E82DD5 /* ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEADC62030BF1E00E82DD5 /* ShowDetail.swift */; };
+		01EEADC92030BF9D00E82DD5 /* DetailHeader+ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EEADC82030BF9D00E82DD5 /* DetailHeader+ShowDetail.swift */; };
 		9923A74C1F8A664C00D3A6F7 /* PosterStripItem+CastMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923A74B1F8A664C00D3A6F7 /* PosterStripItem+CastMember.swift */; };
 		992D27B81F7FFCA600BA79DE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992D27B71F7FFCA600BA79DE /* DetailPresenter.swift */; };
 		992D27BB1F7FFD5E00BA79DE /* DetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992D27BA1F7FFD5E00BA79DE /* DetailSection.swift */; };
@@ -163,6 +167,10 @@
 		01ADDF681F8A714A008C909A /* FeaturedPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPresenterTest.swift; sourceTree = "<group>"; };
 		01ADDF6A1F8A71F2008C909A /* DetailNavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigatorMock.swift; sourceTree = "<group>"; };
 		01ADDF6C1F8A732D008C909A /* FeaturedRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedRepositoryMock.swift; sourceTree = "<group>"; };
+		01EEADC22030BD3B00E82DD5 /* ShowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPresenter.swift; sourceTree = "<group>"; };
+		01EEADC42030BE3400E82DD5 /* ShowRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepository.swift; sourceTree = "<group>"; };
+		01EEADC62030BF1E00E82DD5 /* ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetail.swift; sourceTree = "<group>"; };
+		01EEADC82030BF9D00E82DD5 /* DetailHeader+ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailHeader+ShowDetail.swift"; sourceTree = "<group>"; };
 		9923A74B1F8A664C00D3A6F7 /* PosterStripItem+CastMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PosterStripItem+CastMember.swift"; sourceTree = "<group>"; };
 		992D27B71F7FFCA600BA79DE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		992D27BA1F7FFD5E00BA79DE /* DetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSection.swift; sourceTree = "<group>"; };
@@ -303,6 +311,8 @@
 				99F0564C1F8A3E3100A680D8 /* MovieDetail.swift */,
 				99F056531F8A5F9200A680D8 /* DetailHeader+MovieDetail.swift */,
 				9923A74B1F8A664C00D3A6F7 /* PosterStripItem+CastMember.swift */,
+				01EEADC62030BF1E00E82DD5 /* ShowDetail.swift */,
+				01EEADC82030BF9D00E82DD5 /* DetailHeader+ShowDetail.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -525,6 +535,7 @@
 				992D27B71F7FFCA600BA79DE /* DetailPresenter.swift */,
 				996EAFE01F8007070060FD98 /* DetailHeaderPresenter.swift */,
 				99F056511F8A5B4000A680D8 /* MoviePresenter.swift */,
+				01EEADC22030BD3B00E82DD5 /* ShowPresenter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -634,6 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				99F0564F1F8A5A0E00A680D8 /* MovieRepository.swift */,
+				01EEADC42030BE3400E82DD5 /* ShowRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -896,6 +908,7 @@
 				9989A1231F74EE8500D8DCA7 /* ImageRepository.swift in Sources */,
 				99C5C9051F7B77750038688F /* SearchResultsViewController.swift in Sources */,
 				99C5C9171F7B8E550038688F /* CardPresenter.swift in Sources */,
+				01EEADC72030BF1E00E82DD5 /* ShowDetail.swift in Sources */,
 				99C5C90A1F7B78740038688F /* SearchResultsPresenter.swift in Sources */,
 				99F0564B1F8A3DBF00A680D8 /* Credits.swift in Sources */,
 				99B9A3381F73CB71004F883E /* Endpoint.swift in Sources */,
@@ -912,7 +925,9 @@
 				997A441E1F7AA4110094E928 /* NibLoadableView.swift in Sources */,
 				99B7FB891F88CB4D003CEF98 /* DetailNavigator.swift in Sources */,
 				9943B67F1F7BFF0300D46C90 /* FeaturedPresenter.swift in Sources */,
+				01EEADC32030BD3B00E82DD5 /* ShowPresenter.swift in Sources */,
 				997A44261F7AA9930094E928 /* SearchAssembly.swift in Sources */,
+				01EEADC52030BE3400E82DD5 /* ShowRepository.swift in Sources */,
 				99F056501F8A5A0E00A680D8 /* MovieRepository.swift in Sources */,
 				998AD7DF1F7FF76800D3A222 /* DetailAssembly.swift in Sources */,
 				99C5C91C1F7B966F0038688F /* FeaturedAssembly.swift in Sources */,
@@ -922,6 +937,7 @@
 				997A441C1F7AA3060094E928 /* SearchResultPresenter.swift in Sources */,
 				9989A1211F74EDD400D8DCA7 /* ImageSize.swift in Sources */,
 				9923A74C1F8A664C00D3A6F7 /* PosterStripItem+CastMember.swift in Sources */,
+				01EEADC92030BF9D00E82DD5 /* DetailHeader+ShowDetail.swift in Sources */,
 				992D27B81F7FFCA600BA79DE /* DetailPresenter.swift in Sources */,
 				9989A1271F74F82900D8DCA7 /* CoreAssembly.swift in Sources */,
 				997A441F1F7AA4110094E928 /* ReusableView.swift in Sources */,

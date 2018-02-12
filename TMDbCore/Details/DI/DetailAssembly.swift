@@ -37,7 +37,8 @@ final class DetailAssembly {
 	func moviePresenter(identifier: Int64) -> DetailPresenter {
 		return MoviePresenter(repository: movieRepository(),
 		                      dateFormatter: webServiceAssembly.dateFormatter,
-		                      identifier: identifier)
+		                      identifier: identifier,
+                              detailNavigator: detailNavigator())
 	}
 
 	func movieRepository() -> MovieRepositoryProtocol {
@@ -47,22 +48,27 @@ final class DetailAssembly {
     func showPresenter(identifier: Int64) -> DetailPresenter {
         return ShowPresenter(repository: showRepository(),
                              dateFormatter: webServiceAssembly.dateFormatter,
-                             identifier: identifier)
+                             identifier: identifier,
+                             detailNavigator: detailNavigator())
     }
     
     func showRepository() -> ShowRepositoryProtocol {
         return ShowRepository(webService: webServiceAssembly.webService)
     }
+    
+    func personPresenter(identifier: Int64) -> DetailPresenter {
+        return PersonPresenter(repository: personRepository(),
+                             dateFormatter: webServiceAssembly.dateFormatter,
+                             identifier: identifier,
+                             detailNavigator: detailNavigator())
+    }
+    
+    func personRepository() -> PersonRepositoryProtocol {
+        return PersonRepository(webService: webServiceAssembly.webService)
+    }
 }
 
 extension DetailAssembly: DetailViewControllerProvider {
-	// FIXME: Temporary!!
-	private class DummyDetailPresenter: DetailPresenter {
-		var view: DetailView?
-
-		func didLoad() {}
-		func didSelect(item: PosterStripItem) {}
-	}
 
 	func detailViewController(identifier: Int64, mediaType: MediaType) -> UIViewController {
 
@@ -74,7 +80,7 @@ extension DetailAssembly: DetailViewControllerProvider {
         case .show:
             presenter = showPresenter(identifier: identifier)
         case .person:
-            presenter = DummyDetailPresenter()
+            presenter = personPresenter(identifier: identifier)
         }
 
 		return DetailViewController(presenter: presenter,

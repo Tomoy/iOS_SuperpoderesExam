@@ -11,6 +11,7 @@ import RxSwift
 final class ShowPresenter: DetailPresenter {
     private let repository: ShowRepositoryProtocol
     private let dateFormatter: DateFormatter
+    private let detailNavigator: DetailNavigator
     
     private let identifier: Int64
     private let disposeBag = DisposeBag()
@@ -19,10 +20,12 @@ final class ShowPresenter: DetailPresenter {
     
     init(repository: ShowRepositoryProtocol,
          dateFormatter: DateFormatter,
-         identifier: Int64) {
+         identifier: Int64,
+         detailNavigator: DetailNavigator) {
         self.repository = repository
         self.dateFormatter = dateFormatter
         self.identifier = identifier
+        self.detailNavigator = detailNavigator
     }
     
     func didLoad() {
@@ -42,6 +45,7 @@ final class ShowPresenter: DetailPresenter {
     }
     
     func didSelect(item: PosterStripItem) {
+        detailNavigator.showDetail(withIdentifier: item.identifier, mediaType: .person)
     }
     
     private func detailSections(for show: ShowDetail) -> [DetailSection] {
